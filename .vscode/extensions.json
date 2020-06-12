@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "wix.vscode-import-cost",
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    "ms-vscode.vscode-typescript-next",
+    "denoland.vscode-deno"
+  ]
+}

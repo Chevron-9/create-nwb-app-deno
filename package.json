@@ -1,0 +1,23 @@
+{
+  "name": "create-nwb-app-deno",
+  "description": "Create a next-with-batteries app",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "deno": "deno run --unstable --allow-read --allow-write --allow-net --allow-run -L debug src/mod.ts init",
+    "lint": "eslint src && tsc --noEmit",
+    "lint:fix": "eslint src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chevron-9/create-nwb-app-deno.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Chevron-9/create-nwb-app-deno/issues"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-galex": "^0.4.0",
+    "prettier": "^2.0.5"
+  }
+}
