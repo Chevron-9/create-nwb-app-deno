@@ -34,8 +34,8 @@ Please rename or remove it before trying again.`
   }
 
   const workingDirectory = resolve(cwd(), projectName);
-  // const url = makeUrl(template);
-  const url = 'https://github.com/ljosberinn/personal-react-boilerplate.git';
+  const url = makeUrl(template);
+
   try {
     await clone(url, workingDirectory);
 
