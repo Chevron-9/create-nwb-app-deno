@@ -83,19 +83,6 @@ export const tryGitCommit = async (path: string) => {
   }
 };
 
-export const postClone = async (path: string, useNpm: boolean = false) => {
-  const gitPath = resolve(path, '.git');
-
-  const gitWasInitialized = await tryGitInit(gitPath);
-
-  if (gitWasInitialized) {
-    await tryGitCommit(gitPath);
-  }
-
-  await install(path, useNpm);
-  copyEnv(path);
-};
-
 export const install = async (cwd: string, useNpm: boolean = false) => {
   // eslint-disable-next-line no-console
   console.log('\nInstalling dependencies...');
