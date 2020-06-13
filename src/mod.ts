@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { existsSync } from 'https://deno.land/std/fs/mod.ts';
 import { resolve } from 'https://deno.land/std/path/mod.ts';
 import { Lizard, program } from 'https://deno.land/x/denomander/bootstrap.ts';
@@ -22,6 +21,7 @@ const init = async () => {
     program.template || `next-with-batteries-${defaultTemplate}`;
 
   if (existsSync(projectName)) {
+    // eslint-disable-next-line no-console
     console.error(
       `A folder with the name
 >>> "${projectName}"
@@ -48,6 +48,7 @@ Please rename or remove it before trying again.`
       await tryGitCommit(workingDirectory);
     }
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.warn(`An error occured during project initialization.
 Please ensure that
   - the template exists: "${url}"
@@ -60,6 +61,7 @@ Error: "${error.message}"
     try {
       removeSync(projectName, { recursive: true });
     } catch {
+      // eslint-disable-next-line no-console
       console.error(
         'Could not rollback entirely due to a lack of permissions.'
       );
