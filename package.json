@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "deno": "deno run --unstable --allow-read --allow-write --allow-net --allow-run -L debug src/mod.ts init",
+    "deno": "deno run --unstable --allow-read --allow-write --allow-net --allow-run src/mod.ts init",
+    "deno-debug": "deno run --unstable --allow-read --allow-write --allow-net --allow-run -L debug src/mod.ts init",
     "lint": "eslint src && tsc --noEmit",
     "lint:fix": "eslint src --fix"
   },
@@ -16,8 +17,8 @@
     "url": "https://github.com/Chevron-9/create-nwb-app-deno/issues"
   },
   "devDependencies": {
-    "eslint": "^7.2.0",
-    "eslint-config-galex": "^0.4.0",
+    "eslint": "^7.3.0",
+    "eslint-config-galex": "^0.4.6",
     "prettier": "^2.0.5"
   }
 }
