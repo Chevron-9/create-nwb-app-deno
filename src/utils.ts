@@ -5,7 +5,7 @@
 import { moveSync, copySync } from 'https://deno.land/std/fs/mod.ts';
 import { resolve } from 'https://deno.land/std/path/mod.ts';
 
-import { exec } from './execFork.ts';
+import { exec } from 'https://deno.land/x/execute/mod.ts';
 
 const {
   chmodSync,
@@ -88,6 +88,8 @@ export const install = async (cwd: string, useNpm: boolean = false) => {
   console.log('\nInstalling dependencies...');
 
   const cmd = [useNpm ? 'npm' : 'yarn', 'install'];
+
+  console.log({ cmd });
 
   await exec({
     cmd,
